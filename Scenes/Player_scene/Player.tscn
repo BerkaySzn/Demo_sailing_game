@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cly2odbgofn67"]
+
+[ext_resource type="Script" uid="uid://bd7w4otehe2lq" path="res://Scripts/Player_script/player.gd" id="1_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://iwdhlxpan70b" path="res://Assets/Pirate Pack/PNG/Retina/Ships/ship (1).png" id="1_svq72"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xruw"]
+atlas = ExtResource("1_svq72")
+region = Rect2(0, 0, 66, 113)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5p0eq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xruw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4y1r4"]
+radius = 16.0
+height = 102.0
+
+[node name="Character" type="CharacterBody2D"]
+y_sort_enabled = true
+script = ExtResource("1_kyqiw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -1.5708
+sprite_frames = SubResource("SpriteFrames_5p0eq")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.962738
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_4y1r4")
