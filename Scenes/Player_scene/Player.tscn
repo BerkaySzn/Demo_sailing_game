@@ -36,3 +36,9 @@ frame_progress = 0.962738
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_4y1r4")
+
+[node name="CannonPointLeft" type="Node2D" parent="."]
+position = Vector2(0, -16)
+
+[node name="CannonPointRight" type="Node2D" parent="."]
+position = Vector2(0, 16)

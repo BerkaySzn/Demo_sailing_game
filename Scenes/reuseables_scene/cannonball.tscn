@@ -14,7 +14,7 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_vypwb"]
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
 
-[node name="Area2D" type="Area2D"]
+[node name="Cannonball" type="Area2D"]
 script = ExtResource("1_6sr0g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
