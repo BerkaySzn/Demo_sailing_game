@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cj3dhysnawc5n"]
+[gd_scene load_steps=13 format=3 uid="uid://cj3dhysnawc5n"]
 
 [ext_resource type="PackedScene" uid="uid://cly2odbgofn67" path="res://Scenes/Player_scene/Player.tscn" id="1_75idy"]
 [ext_resource type="Texture2D" uid="uid://br7hc63f67bng" path="res://Assets/Pirate Pack/Tilesheet/tiles_sheet.png" id="2_s3bts"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://decrgogc6v2uc" path="res://Assets/Pirate Pack/PNG/Default size/Ship parts/crew (6).png" id="7_f3qfc"]
 [ext_resource type="Texture2D" uid="uid://b0kpcmoexaxp7" path="res://Assets/Pirate Pack/PNG/Default size/Ship parts/hullLarge (4).png" id="8_oi322"]
 [ext_resource type="Texture2D" uid="uid://bfidc8ejmaam3" path="res://Assets/Pirate Pack/PNG/Default size/Effects/fire2.png" id="9_dncmu"]
-[ext_resource type="PackedScene" uid="uid://bhoyvk7f734qm" path="res://Scenes/reuseables_scene/cannonball.tscn" id="10_7sr0g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2llp"]
 texture = ExtResource("2_s3bts")
@@ -3467,6 +3466,3 @@ texture = ExtResource("8_oi322")
 z_index = 1
 position = Vector2(1467, 108)
 texture = ExtResource("9_dncmu")
-
-[node name="Area2D" parent="." instance=ExtResource("10_7sr0g")]
-position = Vector2(346, 273)

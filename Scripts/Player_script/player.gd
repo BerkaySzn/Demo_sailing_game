@@ -10,7 +10,8 @@ var input_state := {
 	"rotate_clockwise": false,
 	"rotate_c_clockwise": false,
 	"move_forward": false,
-	"move_backward": false
+	"move_backward": false,
+	"shoot": false,
 }
 
 func get_input_state() -> void:
@@ -18,6 +19,7 @@ func get_input_state() -> void:
 	input_state["rotate_clockwise"] = Input.is_action_pressed("rotate_clockwise")
 	input_state["move_forward"] = Input.is_action_pressed("move_forward")
 	input_state["move_backward"] = Input.is_action_pressed("move_backward")
+	input_state["shoot"] = Input.is_action_just_pressed("shoot")
 
 func _physics_process(delta: float):
 	get_input_state()
@@ -44,3 +46,7 @@ func get_input(delta: float):
 		direction += Vector2.RIGHT.rotated(rotation) * max_moving_speed
 	if input_state["move_backward"]:
 		direction -= Vector2.RIGHT.rotated(rotation) * max_moving_speed / 5
+		
+	#shoot
+	if input_state["shoot"]:
+		pass
